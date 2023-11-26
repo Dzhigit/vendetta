@@ -27,3 +27,12 @@ class MainWindow(QMainWindow):
         grid.addWidget(self.messages_widget, 0, 2)
         self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self.settings_dock_widget)
         self.central_widget.setLayout(grid)
+
+if __name__ == '__main__':
+    from PyQt6.QtWidgets import QApplication
+    import sys
+
+    app = QApplication(sys.argv)
+    main_window = MainWindow()
+    main_window.show()
+    sys.exit(app.exec())
